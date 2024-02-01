@@ -5,12 +5,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Collect data from form
     $id = $_POST['id'];
 
-    // Validate input
-    if (empty($id)) {
-        echo "Please fill in all required fields.";
-        exit();
-    }
-
     try {
         $conn = Database::getConnection();
         $statement = $conn->prepare("SELECT * FROM Reservations");

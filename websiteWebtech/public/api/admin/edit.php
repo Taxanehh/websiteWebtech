@@ -8,12 +8,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $start_time = $_POST['start_time'];
     $end_time = $_POST['end_time'];
 
-    // Validate input
-    if (empty($id)) {
-        echo "Please fill in all required fields.";
-        exit();
-    }
-
     try {
         $conn = Database::getConnection();
         $statement = $conn->prepare("SELECT * FROM Reservations");
