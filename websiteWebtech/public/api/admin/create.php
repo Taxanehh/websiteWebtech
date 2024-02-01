@@ -22,6 +22,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $query = $conn->prepare("INSERT INTO `reservations`(`id`, `user_id`, `table_id`, `start_time`, `end_time`) VALUES ('$id','$user_id','$table_id','$start_time','$end_time')");
     $query->execute();
 
+    $query = $conn->prepare("UPDATE tables SET booked = '1' WHERE id = $table_id");
+    $query->execute();
+
     echo '<script>alert("The reservation with ID ' . $id . ' has been created.")</script>';
 }
 exit();
