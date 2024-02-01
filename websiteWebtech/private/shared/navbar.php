@@ -2,8 +2,7 @@
     <div class="nav-inner">
         <div class="nav-left">
             <a href="/reservations">Reservations</a>
-            <!-- TODO: Hover menu -->
-            <a href="#">Menus</a>
+            <a href="/menu">Menus</a>
             <a href="/about">About</a>
         </div>
         <a href="/"><img class="logo" src="/assets/images/logo/logo.png"></a>
