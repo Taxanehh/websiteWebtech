@@ -53,6 +53,39 @@ if (!isset($_SESSION['user']) or $userObject->admin != 1) {
                 </div>
         </div>
     </div>
+    <div class="form-container" style="color:white;">
+            <h1>Menu Dashboard</h1>
+                <div style="position:relative">
+                    <?php
+                    echo Admin::ItemsTable();                    
+                    ?>
+                </div>
+
+                <div style="position:relative">
+                <form action="/api/admin/item_admin/delete" method="post" target="dummyframe">
+                    <label for="id">Delete item</label><br>
+                    <input type="text" id="id" name="id" placeholder="Item ID"><br>
+                    <input type="submit" value="Delete">
+                </form> 
+                <form action="/api/admin/item_admin/edit" method="post" target="dummyframe">
+                    <label for="id">Edit item</label><br>
+                    <input type="text" id="id" name="id" placeholder="Item ID"><br>
+                    <input type="text" id="menu_id" name="menu_id" placeholder="Menu ID"><br>
+                    <input type="text" id="name" name="name" placeholder="Item name"><br>
+                    <input type="number" step="0.01" id="price" name="price" placeholder="Price"><br>
+                    <input type="submit" value="Edit">
+                </form> 
+                <form action="/api/admin/item_admin/create" method="post" target="dummyframe">
+                    <label for="id">Create item</label><br>
+                    <input type="text" id="menu_id" name="menu_id" placeholder="Menu ID"><br>
+                    <input type="text" id="name" name="name" placeholder="Item name"><br>
+                    <input type="text" id="description" name="description" placeholder="Item description"><br>
+                    <input type="number" step="0.01" id="price" name="price" placeholder="Price"><br>
+                    <input type="submit" value="Create item">
+                </form> 
+                </div>
+        </div>
+    </div>
 </div>
 <?php
 #include('../private/shared/cookie_consent.php');
