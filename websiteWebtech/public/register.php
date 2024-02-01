@@ -5,7 +5,7 @@ include('../private/shared/header.php');
 require_once(__DIR__ . '/../private/utils.php');
 
 if (isset($_SESSION['user'])) {
-    header("Location: /dashboard");
+    header("Location: /dashboard.php");
     exit();
 }
 ?>
@@ -17,7 +17,7 @@ if (isset($_SESSION['user'])) {
     <div class="form-container">
         <h1>Register</h1>
 
-        <form action="/api/auth/register" method="post">
+        <form action="/api/auth/register.php" method="post">
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" placeholder="kimi@kimi.com"/>
 

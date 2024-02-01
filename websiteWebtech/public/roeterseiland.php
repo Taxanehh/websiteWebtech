@@ -3,15 +3,6 @@ session_start();
 
 include('../private/shared/header.php');
 include ('../private/classes/user.php');
-
-$userData = $_SESSION['user'];
-
-$userObject = unserialize($userData);
-
-if (!isset($_SESSION['user']) or $userObject->admin != 1) {
-    header("Location: /login");
-    exit();
-}
 ?>
 <div class="header main-header" id="header">
     <?php

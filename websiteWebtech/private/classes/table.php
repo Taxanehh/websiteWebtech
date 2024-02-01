@@ -16,7 +16,7 @@ class Table
         $this->booked = $booked;
     }
 
-    public function getTable($table_id): ?Table
+    public static function getTable($table_id): ?Table
     {
         try {
             $conn = Database::getConnection();
@@ -32,7 +32,7 @@ class Table
         return new Table($result['id'], $result['location_id'], $result['max_seats'], $result['booked']);
     }
 
-    public function getAvailableTables($location_id): array
+    public static function getAvailableTables($location_id): array
     {
         try {
             $conn = Database::getConnection();
@@ -55,7 +55,7 @@ class Table
         return $tables;
     }
 
-    public function getSeats($table_id): int
+    public static function getSeats($table_id): int
     {
         try {
             $conn = Database::getConnection();

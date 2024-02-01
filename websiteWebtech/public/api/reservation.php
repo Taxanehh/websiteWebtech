@@ -80,7 +80,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Alert user of successful form submission
-    header("Location: /dashboard?reservation=success");
+    header("Location: /dashboard.php?reservation=success");
 } else {
     // Not a POST request, redirect to homepage
     header("Location: /");

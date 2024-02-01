@@ -3,10 +3,11 @@ session_start();
 
 include('../private/shared/header.php');
 require_once(__DIR__ . '/../private/utils.php');
+require_once(__DIR__ . '/../private/classes/table.php');
 require_once(__DIR__ . '/../private/classes/location.php');
 
 if (!isset($_SESSION['user'])) {
-    header("Location: /login");
+    header("Location: /login.php");
     exit();
 }
 ?>
@@ -18,7 +19,7 @@ if (!isset($_SESSION['user'])) {
             <h1>Reserve a table</h1>
             <h3>You can also contact us by calling: +12 3 45678901, or by emailing us directly at:
                 kimi@restaurant.uva.nl </h3>
-            <form action="/api/reservation" method="post">
+            <form action="/api/reservation.php" method="post">
                 <label for="location">Location:</label>
                 <?php
                 // Get all locations, and display them in a dropdown.

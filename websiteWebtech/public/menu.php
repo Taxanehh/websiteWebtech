@@ -10,8 +10,8 @@ include ('../private/classes/user.php');
     ?>
         <div class="form-container" style="color:white;">
                 <h1>Menu's</h1>
-                <h2><a href="/roeterseiland">Roeterseiland</a></h2>
-                <h2><a href="/science_park">Science Park</a></h2>
+                <h2><a href="/roeterseiland.php">Roeterseiland</a></h2>
+                <h2><a href="/science_park.php">Science Park</a></h2>
         </div>
     </div>
 <?php

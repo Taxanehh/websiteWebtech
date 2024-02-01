@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         };
 
-        xhr.open('GET', 'api/table/tables?locationId=' + locationId, true);
+        xhr.open('GET', 'api/table/tables.php?locationId=' + locationId, true);
         xhr.send();
     }
 
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         };
 
-        xhr.open('GET', 'api/table/seat?tableId=' + tableId, true);
+        xhr.open('GET', 'api/table/seat.php?tableId=' + tableId, true);
         xhr.send();
     }
 

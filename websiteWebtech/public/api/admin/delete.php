@@ -15,6 +15,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         return false;
     }
 
+    $query = $conn->prepare("SELECT table_id FROM Reservations WHERE id=$id");
+    $tableid = $query->execute();
+    
+    $query = $conn->prepare("UPDATE tables SET booked = '0' WHERE id=$tableid");
+    $query->execute();
+
     $query = $conn->prepare("DELETE FROM Reservations WHERE id=$id");
     $query->execute();
 

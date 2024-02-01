@@ -1,20 +1,20 @@
 <div class="nav">
     <div class="nav-inner">
         <div class="nav-left">
-            <a href="/reservations">Reservations</a>
-            <a href="/menu">Menus</a>
-            <a href="/about">About</a>
+            <a href="/reservations.php">Reservations</a>
+            <a href="/menu.php">Menus</a>
+            <a href="/about.php">About</a>
         </div>
         <a href="/"><img class="logo" src="/assets/images/logo/logo.png"></a>
         <div class="nav-right">
-            <a href="/contact">Contact</a>
+            <a href="/contact.php">Contact</a>
             <?php
             if (isset($_SESSION['user'])) {
-                echo "<a href='/dashboard'>Dashboard</a>";
-                echo '<a href="/logout">Logout</a>';
+                echo "<a href='/dashboard.php'>Dashboard</a>";
+                echo '<a href="/logout.php">Logout</a>';
             } else {
-                echo '<a href="/register">Register</a>';
-                echo '<a href="/login">Login</a>';
+                echo '<a href="/register.php">Register</a>';
+                echo '<a href="/login.php">Login</a>';
             }
             ?>
         </div>
@@ -32,15 +32,15 @@
             <a href="/reservations">Reservations</a>
             <!-- TODO: Dropdown menu -->
             <a href="#">Menus</a>
-            <a href="/about">About</a>
-            <a href="/contact">Contact</a>
+            <a href="/about.php">About</a>
+            <a href="/contact.php">Contact</a>
             <?php
             if (isset($_SESSION['user'])) {
-                echo "<a href='/dashboard'>Dashboard</a>";
-                echo '<a href="/logout">Logout</a>';
+                echo "<a href='/dashboard.php'>Dashboard</a>";
+                echo '<a href="/logout.php">Logout</a>';
             } else {
-                echo '<a href="/register">Register</a>';
-                echo '<a href="/login">Login</a>';
+                echo '<a href="/register.php">Register</a>';
+                echo '<a href="/login.php">Login</a>';
             }
             ?>
         </div>

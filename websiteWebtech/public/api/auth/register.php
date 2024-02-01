@@ -71,7 +71,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $_SESSION['user'] = serialize($success);
 
     // Redirect to dashboard
-    header("Location: /dashboard");
+    header("Location: /dashboard.php");
 } else {
     // Not a POST request, redirect to homepage
     header("Location: /");
